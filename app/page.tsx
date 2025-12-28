@@ -2,12 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-  Home,
-  Award,
-  Wallet,
-  User,
-  Compass,
-  Search,
   Star,
   Check,
   ChevronLeft,
@@ -17,72 +11,15 @@ import {
   Youtube,
   Apple,
 } from "lucide-react";
+import Hero from "@/components/shared/Hero";
 
 export default function RestaurantLanding() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       {/* Hero Section */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-5xl lg:text-7xl font-black leading-tight text-balance">
-              We Serve The Test You Love{" "}
-              <span className="inline-block">😊</span>
-            </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-              This is a type of restaurant which typically serves food and
-              drink, in addition to light refreshments such as baked goods or
-              snacks. The term comes from the French word meaning food
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg">
-                Explore Food
-              </Button>
-              <Button
-                variant="outline"
-                className="rounded-full px-8 py-6 text-lg bg-transparent"
-              >
-                <Search className="mr-2 h-5 w-5" />
-                Search
-              </Button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 bg-background p-4 rounded-3xl shadow-lg">
-              <button className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <Home className="h-5 w-5 text-primary-foreground" />
-              </button>
-              <button className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-accent/80 transition-colors">
-                <Award className="h-5 w-5" />
-              </button>
-              <button className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-accent/80 transition-colors">
-                <Wallet className="h-5 w-5" />
-              </button>
-              <button className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-accent/80 transition-colors">
-                <User className="h-5 w-5" />
-              </button>
-              <button className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-accent/80 transition-colors">
-                <Compass className="h-5 w-5" />
-              </button>
-            </div>
-
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-full" />
-              <img
-                src="/gourmet-salmon-dish-with-vegetables-on-white-plate.jpg"
-                alt="Delicious food plate"
-                className="relative z-10 w-full h-full object-cover rounded-full shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Hero />
       {/* Popular Dishes */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-4xl lg:text-5xl font-bold">Popular Dishes</h2>
           <div className="flex gap-2">
@@ -157,10 +94,10 @@ export default function RestaurantLanding() {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 bg-accent/30 rounded-[4rem] my-12">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20 bg-accent/30 rounded-[4rem] my-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="relative w-full aspect-square max-w-md mx-auto">
@@ -201,10 +138,10 @@ export default function RestaurantLanding() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Regular Menu Pack */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-8">
           Our Regular Menu Pack
         </h2>
@@ -297,10 +234,10 @@ export default function RestaurantLanding() {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       {/* Reservation Section */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <div className="bg-accent/30 rounded-[4rem] p-8 lg:p-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -328,10 +265,10 @@ export default function RestaurantLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-4xl lg:text-5xl font-bold">
             What Our Customer Says?
@@ -381,10 +318,10 @@ export default function RestaurantLanding() {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Chefs Section */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-4xl lg:text-5xl font-bold">Meet Our Chefs</h2>
           <div className="flex gap-2">
@@ -433,10 +370,10 @@ export default function RestaurantLanding() {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Mobile App Section */}
-      <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
+      {/* <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
         <div className="bg-accent/30 rounded-[4rem] p-8 lg:p-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -482,10 +419,10 @@ export default function RestaurantLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12 mt-20">
+      {/* <footer className="bg-foreground text-background py-12 mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
             <div className="col-span-2">
@@ -672,7 +609,7 @@ export default function RestaurantLanding() {
             <p>© 2025 Bites. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

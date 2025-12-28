@@ -50,12 +50,12 @@ export default function Header() {
             {/* Auth */}
             <Button
               className="
-            gap-2 bg-primary-400 hover:bg-primary-500 flex items-center text-primary-800"
+            gap-2 bg-primary-400 hover:bg-primary-500/90  flex items-center rounded-full text-primary-800  px-4 py-2"
               aria-label="ورود یا ثبت‌نام"
             >
               <LogIn />
 
-              <span className="hidden sm:inline my-auto">ورود / ثبت‌نام</span>
+              <span className="hidden sm:inline my-auto ">ورود / ثبت‌نام</span>
             </Button>
 
             {/* side nav */}
