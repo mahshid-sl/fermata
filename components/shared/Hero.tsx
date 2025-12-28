@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid  md:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div className="space-y-6">
           <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-black leading-tight whitespace-nowrap">
