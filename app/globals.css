@@ -1,2 +1,60 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-vazirmatn: var(--font-vazirmatn);
+}
+@theme {
+  /* Primary – Gold / Fermata Core */
+  --color-primary-50: #fbf7ea;
+  --color-primary-100: #f7eed4;
+  --color-primary-200: #eeddaa;
+  --color-primary-300: #e6cc7f;
+  --color-primary-400: #ddbb55;
+  --color-primary-500: #d5aa2a;
+  --color-primary-600: #aa8822;
+  --color-primary-700: #806619;
+  --color-primary-800: #554411;
+  --color-primary-900: #2b2208;
+
+  /* Secondary – Olive / Natural */
+  --color-secondary-50: #f8f7ec;
+  --color-secondary-100: #f1efda;
+  --color-secondary-200: #e4deb4;
+  --color-secondary-300: #d6ce8f;
+  --color-secondary-400: #c9be69;
+  --color-secondary-500: #bbad44;
+  --color-secondary-600: #968b36;
+  --color-secondary-700: #706829;
+  --color-secondary-800: #4b451b;
+  --color-secondary-900: #25230e;
+
+  /* Accent – Apricot */
+  --color-accent-400: #d69f5c;
+  --color-accent-500: #cc8733;
+  --color-accent-600: #a36c29;
+
+  /* Semantic */
+  --success: #2ecc71;
+  --error: #e74c3c;
+}
+
+body {
+  direction: rtl;
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-900);
+  font-family: var(--font-vazirmatn), system-ui, sans-serif;
+}
+
+/* | کاربرد          | رنگ         |
+| --------------- | ----------- |
+| CTA اصلی        | primary-500 |
+| Hover CTA       | primary-600 |
+| Background صفحه | primary-50  |
+| Border          | primary-200 |
+| Text اصلی       | primary-900 |
+| Text ثانویه     | primary-700 |
+| Accent کم       | accent-500  |
+ */
