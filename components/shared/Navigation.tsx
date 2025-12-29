@@ -55,7 +55,7 @@ export default function Navigation({
             transition-all
           md:text-base md:font-bold ${
             pathname === link.href ? "text-primary-500 " : "text-primary-700"
-          }`}
+          } `}
         >
           <div className="flex items-center gap-2">
             {link.icon}

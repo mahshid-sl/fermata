@@ -1,9 +1,9 @@
-import { Button } from "../ui/button";
 import Image from "next/image";
 import banner from "@/public/banner/banner.png";
 import { Search } from "lucide-react";
 import SideBanner from "./SideBanner";
 import Link from "next/link";
+import NoisyButton from "./NoisyButton";
 
 export default function Hero() {
   return (
@@ -19,7 +19,7 @@ export default function Hero() {
           <p
             className="
           text-sm md:text-lg
-         leading-relaxed max-w-md text-primary-800 text-justify"
+        leading-relaxed max-w-md text-primary-800 text-justify"
           >
             در فرماتا، طعم‌های اصیل، موسیقی زنده و فضایی آرام کنار هم قرار
             می‌گیرند تا هر لحظه، تبدیل به تجربه‌ای ماندگار شود.
@@ -27,19 +27,10 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             {/* Order Button */}
-            <Button
-              asChild
-              className="
-      h-10 md:h-12 lg:h-14
-      px-5 md:px-6 lg:px-8
-      text-sm md:text-base lg:text-lg
-      rounded-full
-      bg-primary-500 hover:bg-primary-600
-    "
-            >
-              <Link href="/menu">سفارش آنلاین</Link>
-            </Button>
 
+            <Link href="/menu">
+              <NoisyButton>سفارش آنلاین</NoisyButton>
+            </Link>
             {/* Search Input */}
             <div className="relative">
               <input

@@ -7,10 +7,11 @@ import { LogIn, ShoppingCart } from "lucide-react";
 import { Badge } from "../ui/badge";
 
 import SideNav from "./SideNav";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-primary-50  shadow-sm">
+    <header className="sticky top-0 z-50 bg-primary-50  shadow-sm ">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -48,15 +49,16 @@ export default function Header() {
             </div>
 
             {/* Auth */}
-            <Button
-              className="
-            gap-2 bg-primary-400 hover:bg-primary-500/90  flex items-center rounded-full text-primary-800  px-4 py-2"
+
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black  dark:text-white md:flex  gap-2  bg-primary-100  items-center rounded-full text-primary-800  px-4 py-2 cursor-pointer hidden md:text-sm lg:text-base"
               aria-label="ورود یا ثبت‌نام"
             >
-              <LogIn />
-
-              <span className="hidden sm:inline my-auto ">ورود / ثبت‌نام</span>
-            </Button>
+              <LogIn size={18} />
+              <span>ورود / ثبت نام</span>
+            </HoverBorderGradient>
 
             {/* side nav */}
             <SideNav />
