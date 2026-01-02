@@ -15,7 +15,7 @@ import Hero from "@/components/shared/Hero";
 
 export default function RestaurantLanding() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <Hero />
       {/* Popular Dishes */}
@@ -613,3 +613,22 @@ export default function RestaurantLanding() {
     </div>
   );
 }
+
+/* visual od hero */
+
+/*   <div className="relative flex items-center justify-center gap-6">
+      
+          <div className="relative aspect-square w-full max-w-sm bg-primary-100 rounded-full">
+            <Image
+              src={banner}
+              alt="Fermata banner"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+          <div className="hidden sm:block">
+            <SideBanner />
+          </div>
+        </div>
+       */

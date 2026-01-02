@@ -8,6 +8,8 @@
 }
 @theme {
   /* Primary – Gold / Fermata Core */
+
+  --color-bg: #faf7ef;
   --color-primary-50: #fbf7ea;
   --color-primary-100: #f7eed4;
   --color-primary-200: #eeddaa;
@@ -43,7 +45,7 @@
 
 body {
   direction: rtl;
-  background-color: var(--color-primary-50);
+  background-color: var(--color-bg);
   color: var(--color-primary-900);
   font-family: var(--font-vazirmatn), system-ui, sans-serif;
 }

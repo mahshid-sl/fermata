@@ -1,78 +1,67 @@
 import Image from "next/image";
-import banner from "@/public/banner/banner.png";
-import { Search } from "lucide-react";
-import SideBanner from "./SideBanner";
 import Link from "next/link";
 import NoisyButton from "./NoisyButton";
+import { TextGenerate } from "./TextGenerate";
+import SearchBar from "./SearchBar";
 
 export default function Hero() {
   return (
-    <section className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-      <div className="grid  md:grid-cols-2 gap-12 items-center">
-        {/* Text */}
-        <div className="space-y-6">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-black leading-tight whitespace-nowrap">
-            <span className="block">جایـــی</span>
-            برای مکث در زمان <span>&#119056;</span>
-          </h1>
+    <section className="relative overflow-hidden min-h-[75vh] lg:min-h-[90vh]">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/hero-bg.png"
+          alt="Hero background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center md:object-[center_top]
+          xl:object-contain
+          "
+        />
+        <div className="absolute inset-0 " />
+      </div>
 
-          <p
-            className="
-          text-sm md:text-lg
-        leading-relaxed max-w-md text-primary-800 text-justify"
-          >
-            در فرماتا، طعم‌های اصیل، موسیقی زنده و فضایی آرام کنار هم قرار
-            می‌گیرند تا هر لحظه، تبدیل به تجربه‌ای ماندگار شود.
-          </p>
+      {/* Content */}
+      <div className="container mx-auto px-4 lg:px-8 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-16">
+          {/* Text – Right */}
+          <div className="order-1 md:order-1 space-y-6 text-right">
+            <h1 className="max-w-xl text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-tight text-primary-900">
+              <TextGenerate />
+            </h1>
 
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-            {/* Order Button */}
+            <p className="max-w-md text-sm sm:text-base md:text-lg leading-relaxed text-primary-800">
+              در فرماتا، طعم‌های اصیل، موسیقی زنده و فضایی آرام کنار هم قرار
+              می‌گیرند تا هر لحظه، تبدیل به تجربه‌ای ماندگار شود.
+            </p>
+            <div
+              className="
+    flex flex-col gap-4
+    sm:flex-row sm:items-center
+    sm:justify-center
+    md:justify-start
+  "
+            >
+              <Link href="/menu">
+                <NoisyButton>سفارش آنلاین</NoisyButton>
+              </Link>
 
-            <Link href="/menu">
-              <NoisyButton>سفارش آنلاین</NoisyButton>
-            </Link>
-            {/* Search Input */}
-            <div className="relative">
-              <input
-                type="search"
-                placeholder="جستجو در منو"
-                className="
-        h-10 md:h-12 lg:h-14
-        w-40 md:w-56 lg:w-72
-        rounded-full
-        bg-primary-100
-        border border-primary-200
-        pr-10 pl-4
-        text-sm md:text-base lg:text-lg
-        placeholder:text-primary-700
-        focus:outline-none focus:ring-2 focus:ring-primary-400
-        transition
-      "
-              />
-              <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-primary-700" />
+              <SearchBar />
             </div>
           </div>
-        </div>
 
-        {/* Visual */}
-        <div className="grid grid-cols-[1fr_auto] gap-6 items-center   ">
-          {/* Image */}
-          <div className="flex justify-center w-full  ">
-            {" "}
-            <div className="relative aspect-square w-full max-w-md bg-primary-100 rounded-full   ">
+          {/* Visual – Left */}
+          <div className="order-1 relative w-full max-w-2xl mx-auto ">
+            <div className="relative aspect-square">
               <Image
-                src={banner}
-                alt="Fermata banner"
+                src="/hero-food.png"
+                alt="Fermata food"
                 fill
+                className="object-contain"
                 priority
-                className="object-contain "
               />
             </div>
-          </div>
-
-          {/* Side Banner */}
-          <div className="hidden sm:flex ">
-            <SideBanner />
           </div>
         </div>
       </div>

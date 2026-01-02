@@ -11,17 +11,16 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-primary-50  shadow-sm ">
+    <header className="sticky top-0 z-50 bg-primary-50/95 backdrop-blur shadow">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-
           <Link href="/" className="flex items-center">
             <Image
               src={logo}
               alt="Fermata Cafe & Restaurant"
-              width={110}
-              height={100}
+              width={104}
+              height={96}
               priority
               className="object-contain"
             />
@@ -37,30 +36,31 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-accent-400 hover:bg-primary-100 cursor-pointer "
+                className="rounded-full border-primary-300 hover:bg-primary-100"
                 aria-label="سبد خرید"
               >
-                <ShoppingCart className="text-primary-800" size={20} />
+                <ShoppingCart size={20} />
               </Button>
 
-              <Badge className="absolute -top-1 -right-1 h-5 min-w-5 rounded-full px-1 text-xs bg-accent-400 text-white ">
+              <Badge className="absolute -top-1 -right-1 h-5 min-w-5 rounded-full bg-accent-400 text-white text-xs">
                 8
               </Badge>
             </div>
 
-            {/* Auth */}
-
+            {/* Auth (Desktop) */}
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
-              className="dark:bg-black  dark:text-white md:flex  gap-2  bg-primary-100  items-center rounded-full text-primary-800  px-4 py-2 cursor-pointer hidden md:text-sm lg:text-base"
+              className="hidden md:flex items-center gap-2 px-4 py-2
+                        bg-primary-100 text-primary-800 text-sm
+                        hover:bg-primary-200 transition"
               aria-label="ورود یا ثبت‌نام"
             >
-              <LogIn size={18} />
-              <span>ورود / ثبت نام</span>
+              <LogIn size={16} />
+              <span>ورود / ثبت‌نام</span>
             </HoverBorderGradient>
 
-            {/* side nav */}
+            {/* Mobile Menu */}
             <SideNav />
           </div>
         </div>

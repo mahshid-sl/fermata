@@ -215,14 +215,14 @@ export const NoiseBackground = ({
       />
 
       {/* Static Noise Pattern */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {/* <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <img
           src="https://assets.aceternity.com/noise.webp"
           alt=""
-          className="h-full w-full object-cover opacity-[var(--noise-opacity)]"
+          className="h-full w-full object-cover opacity-(--noise-opacity)"
           style={{ mixBlendMode: "overlay" }}
         />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className={cn("relative z-10", className)}>{children}</div>

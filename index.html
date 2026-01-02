@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set, compatibility, and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- External CSS and icon library links -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Page title that appears in browser tab -->
+    <title>Food Website</title>
+  </head>
+  <body>
+    <!-- ====================== -->
+    <!--      NAVIGATION BAR    -->
+    <!-- ====================== -->
+    <nav class="navbar">
+      <!-- Website logo -->
+      <div class="logo">
+        <img src="images/logo.png" alt="Website Logo">
+      </div>
+      
+      <!-- Main navigation links -->
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>   
+        <li><a href="#">About</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Tours</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      
+      <!-- Navigation action buttons (search and cart) -->
+      <div class="nav-buttons">
+        <i class="ri-search-line"></i> 
+        <i class="ri-shopping-cart-2-line"></i>  
+      </div>
+    </nav>
+
+    <!-- ====================== -->
+    <!--      MAIN CONTENT      -->
+    <!-- ====================== -->
+
+    <div class="main">
+ 
+      <!--  SOCIAL ICONS  --> 
+          <div class="social-icons" data-aos="fade-right" data-aos-duration="3000">
+            <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-pinterest-fill"></i></a>
+          </div>
+
+      <!--  hero content  -->
+        
+      <div class="hero-content">
+        <h1 data-aos="fade-up" data-aos-duration="1000"><span>Welcome</span>to<br>The world of  <br> Tasty & Fresh Food</h1>
+        <p data-aos="fade-up" data-aos-duration="1500">Click any food card below to see it rotate into view on the circular image slider. 
+        <br>
+        The rotation follows the edge of the circle in an anti-clockwise direction!</p>
+        <a href="#" class="explore-btn" data-aos="fade-up" data-aos-duration="2000">
+          Explore Menu <span class="arrow">→</span>
+        </a>
+
+        <!--  CONTROLS  -->
+
+        <div class="controls" data-aos="fade-up" data-aos-duration="3000">
+          <div class="control active" data-index="1">
+            <img src="images/food-1.png" alt="">
+            <h3>Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="control" data-index="2">
+            <img src="images/food-2.png" alt="">
+            <h3>Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="control" data-index="3">
+            <img src="images/food-3.png" alt="">
+            <h3>Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="control" data-index="4">
+            <img src="images/food-4.png" alt="">
+            <h3>Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--  SLIDESHOW -->
+
+      <div class="slideshow">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/food-1.png" alt="">
+          </div>
+
+          <div class="slide">
+            <img src="images/food-2.png" alt="">
+          </div>
+
+          <div class="slide">
+            <img src="images/food-3.png" alt="">
+          </div>
+
+          <div class="slide">
+            <img src="images/food-4.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+ 
+
+
+    
+    <!-- External JavaScript file link -->
+    <script src="script.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 0
+    });
+  </script>
+  </body>
+</html>

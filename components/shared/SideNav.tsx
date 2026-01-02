@@ -7,36 +7,37 @@ import {
 } from "@/components/ui/sheet";
 import { LogIn, Menu } from "lucide-react";
 import Navigation from "./Navigation";
-import { Button } from "../ui/button";
+
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function SideNav() {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger aria-label="منو">
         <Menu className="lg:hidden" />
       </SheetTrigger>
+
       <SheetContent
         side="right"
-        className="w-full max-h-screen max-w-xs bg-primary-50 lg:hidden flex flex-col justify-between space-y-20 "
+        className="w-full max-w-xs bg-bg flex flex-col justify-between overflow-auto "
       >
         <SheetHeader>
-          <SheetTitle className="border-b border-primary-200 pb-4 mb-4 text-lg font-bold">
+          <SheetTitle className="border-b border-primary-200 pb-4 mb-6 text-lg font-bold">
             منو
           </SheetTitle>
-          <Navigation isMobile={true} />
+          <Navigation isMobile />
         </SheetHeader>
 
-        <div className=" flex justify-center text-center">
-          {" "}
+        <div className="pb-6 flex justify-center  ">
           <HoverBorderGradient
-            containerClassName="rounded-full"
+            containerClassName="rounded-full "
             as="button"
-            className="dark:bg-black  dark:text-white  gap-2  bg-primary-100 flex justify-center  items-center rounded-full text-primary-800  px-4 py-2 cursor-pointer  md:text-sm  "
-            aria-label="ورود یا ثبت‌نام"
+            className="flex items-center justify-center gap-2
+          bg-primary-100 text-primary-800
+            px-4 py-2 rounded-full"
           >
             <LogIn size={18} />
-            <span>ورود / ثبت نام</span>
+            <span>ورود / ثبت‌نام</span>
           </HoverBorderGradient>
         </div>
       </SheetContent>
