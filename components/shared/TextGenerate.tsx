@@ -2,10 +2,6 @@
 
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
-const words = `جایـــی
-برای مکث در زمان 𝄐
-`;
-
-export function TextGenerate() {
+export function TextGenerate({ words }: { words: string }) {
   return <TextGenerateEffect words={words} />;
 }
