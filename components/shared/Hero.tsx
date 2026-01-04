@@ -27,7 +27,10 @@ export default function Hero() {
           {/* 1. Text Section (Right Side) */}
           <div className="order-2 lg:order-1 flex flex-col items-start text-right space-y-6 lg:space-y-8">
             <h1 className="w-full text-4xl sm:text-5xl lg:text-6xl/tight font-black text-primary-900 drop-shadow-sm">
-              <TextGenerate />
+              <TextGenerate
+                words={`جایـــی
+برای مکث در زمان 𝄐`}
+              />
             </h1>
 
             <p className="max-w-xl text-base sm:text-lg lg:text-xl leading-relaxed text-primary-800/90 font-medium">
