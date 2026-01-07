@@ -18,6 +18,7 @@ type CarouselProps<T> = {
   breakpoints?: Record<number, SwiperBreakpoint>;
   className?: string;
   navigation?: boolean;
+  navigationId?: string;
 };
 
 export default function Carousel<T>({
@@ -28,6 +29,7 @@ export default function Carousel<T>({
   breakpoints,
   className,
   navigation,
+  navigationId,
 }: CarouselProps<T>) {
   const [loaded, setLoaded] = useState(false);
 
@@ -57,10 +59,10 @@ export default function Carousel<T>({
           }
         }
         navigation={
-          navigation
+          navigation && navigationId
             ? {
-                nextEl: ".custom-next",
-                prevEl: ".custom-prev",
+                nextEl: `.${navigationId}-next`,
+                prevEl: `.${navigationId}-prev`,
               }
             : false
         }
