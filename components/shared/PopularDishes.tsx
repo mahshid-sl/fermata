@@ -1,8 +1,8 @@
 "use client";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Carousel from "./Carousel";
 import FoodCard from "./FoodCard";
+import CarouselNavigationBtn from "./CarouselNavigationBtn";
 
 const mockFood = [
   {
@@ -44,19 +44,13 @@ export default function PopularDishes() {
           محبوب ترین ها
         </h2>
         {/* Navigation Buttons */}
-        <div className="flex gap-2">
-          <button className="custom-prev flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-            <ChevronRight size={24} />
-          </button>
-          <button className="custom-next flex items-center justify-center w-10 h-10 rounded-full border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-            <ChevronLeft size={24} />
-          </button>
-        </div>
+        <CarouselNavigationBtn navigationId="foodCard" />
       </div>
 
       <Carousel
         items={mockFood}
         navigation={true}
+        navigationId="foodCard"
         renderItem={(dish) => <FoodCard dish={dish} />}
       />
     </section>
