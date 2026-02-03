@@ -15,7 +15,11 @@ export default function TestimonialCard({
   testimonial,
 }: TestimonialCardProps) {
   return (
-    <Card className="rounded-3xl shadow-lg hover:shadow-md transition-shadow h-full bg-primary-50 border-0">
+    <Card
+      className="rounded-3xl hover:shadow-xl transition-shadow h-full   border border-primary-200
+  bg-primary-50
+ "
+    >
       <CardContent className="p-8 flex flex-col h-full">
         {/* Testimonial text */}
         <div className="relative mb-6">

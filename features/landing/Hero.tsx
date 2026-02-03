@@ -4,10 +4,12 @@ import NoisyButton from "../../components/shared/NoisyButton";
 import { TextGenerate } from "../../components/shared/TextGenerate";
 import SearchBar from "../../components/shared/SearchBar";
 
+import FadeIn from "@/components/shared/FadeIn";
+import AnimatedBtn from "@/components/shared/AnimatedBtn";
+
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden min-h-[85vh] flex items-center">
-      {/* --- Background Image & Overlay --- */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         <Image
           src="/hero-bg.png"
@@ -40,12 +42,14 @@ export default function Hero() {
 
             {/* Actions */}
             <div className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+              {" "}
               <Link href="/menu" className="block">
-                <NoisyButton>سفارش آنلاین</NoisyButton>
+                <AnimatedBtn>
+                  <NoisyButton>سفارش آنلاین</NoisyButton>
+                </AnimatedBtn>
               </Link>
-
               <div className="w-full sm:max-w-xs">
-                <SearchBar />
+                <SearchBar variant="large" />
               </div>
             </div>
           </div>
@@ -54,16 +58,19 @@ export default function Hero() {
           <div className="order-1 lg:order-2 relative w-full flex justify-center lg:justify-end">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary-500/10 rounded-full blur-3xl -z-10" />
 
-            <div className="relative w-70 sm:w-100 lg:w-125 aspect-square animate-float">
-              <Image
-                src="/hero-food.png"
-                alt="غذای ویژه فرماتا"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
+            <FadeIn distance={-40}>
+              {" "}
+              <div className="relative w-70 sm:w-100 lg:w-125 aspect-square animate-float">
+                <Image
+                  src="/hero-food.png"
+                  alt="غذای ویژه فرماتا"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
+            </FadeIn>
           </div>
         </div>
       </div>

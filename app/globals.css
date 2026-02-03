@@ -6,6 +6,7 @@
 @theme inline {
   --font-vazirmatn: var(--font-vazirmatn);
 }
+
 @theme {
   /* Primary – Gold / Fermata Core */
 
@@ -41,6 +42,11 @@
   /* Semantic */
   --success: #2ecc71;
   --error: #e74c3c;
+
+  --swiper-navigation-size: 24px !important;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--color-primary-900);
 }
 
 body {
@@ -48,6 +54,26 @@ body {
   background-color: var(--color-bg);
   color: var(--color-primary-900);
   font-family: var(--font-vazirmatn), system-ui, sans-serif;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+.filter-pill {
+  @apply flex items-center gap-2
+    rounded-full border border-primary-300
+    px-4 py-1.5 text-sm
+    bg-white text-primary-800
+    hover:bg-primary-100
+    transition-colors
+    whitespace-nowrap;
 }
 
 /* | کاربرد          | رنگ         |

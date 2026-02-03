@@ -1,4 +1,4 @@
-import { Button } from "../../components/ui/button";
+import Link from "next/link";
 import FoodCard from "./FoodCard";
 
 const menuItems = [
@@ -10,6 +10,7 @@ const menuItems = [
   "غذاهای دریایی",
   "بین‌الملل",
   "دسر",
+  "نوشیدنی",
 ];
 
 const mockFood = [
@@ -86,15 +87,16 @@ export default function MenuPack() {
 
       <div className="flex flex-wrap gap-3 justify-center mb-12">
         {menuItems.map((category, idx) => (
-          <Button
+          <Link
             key={idx}
-            variant="outline"
-            className={`rounded-full px-6 border-accent-400 ${
-              category === "فست‌فود" ? "bg-primary-400 " : ""
-            }`}
+            href="/menu"
+            className={`rounded-full px-6 py-2 border-accent-400 cursor-pointer   hover:scale-[1.03] hover:bg-primary-100
+active:scale-[0.97] transition-transform shadow-[0_3px_20px_rgba(204,135,51,0.35)]
+
+${category === "فست‌فود" ? "bg-primary-300 hover:bg-primary-400 " : ""}`}
           >
             {category}
-          </Button>
+          </Link>
         ))}
       </div>
 
@@ -103,8 +105,17 @@ export default function MenuPack() {
           <FoodCard dish={dish} key={dish.name} />
         ))}
       </div>
-      <div className="flex w-36 justify-center items-center mx-auto border border-primary-400 rounded-full px-2">
-        <Button className="">مشاهده منوی کامل</Button>
+      <div className="flex w-36 justify-center items-center mx-auto ">
+        <Link
+          href="/menu"
+          className="bg-primary-100  hover:bg-primary-200 rounded-full px-3 py-2 mt-4  border-2 border-primary-400  focus-within:border-primary-500
+          focus-within:ring-2 cursor-pointer
+          focus-within:ring-primary-500
+            hover:scale-[1.03]
+active:scale-[0.97] transition-transform shadow-[0_3px_20px_rgba(204,135,51,0.35)]"
+        >
+          مشاهده منو کامل
+        </Link>
       </div>
     </section>
   );

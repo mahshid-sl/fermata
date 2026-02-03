@@ -32,11 +32,11 @@ export default function Navigation({ isMobile = false }) {
           <Link
             key={link.href}
             href={link.href}
-            className={`flex items-center gap-2 text-sm font-medium transition
+            className={`flex items-center gap-2 text-sm font-medium transition 
               ${
                 isActive
                   ? "text-primary-900"
-                  : "text-primary-700 hover:text-primary-900"
+                  : "text-primary-700 hover:text-primary-900 hover:scale-105 transition"
               }
             `}
           >

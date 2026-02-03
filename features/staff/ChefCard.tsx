@@ -11,7 +11,7 @@ type ChefCardProps = {
 
 export default function ChefCard({ chef }: ChefCardProps) {
   return (
-    <Card className=" border-0 bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
+    <Card className="group border-0 bg-white rounded-3xl overflow-hidden hover:shadow-xl transition">
       <CardContent className="p-0">
         <div className="relative aspect-square">
           <Image

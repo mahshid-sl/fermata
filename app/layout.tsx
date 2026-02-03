@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 const vazirmatn = Vazirmatn({
   variable: "--font-vazirmatn",

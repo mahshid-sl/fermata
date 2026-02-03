@@ -1,5 +1,5 @@
+import HoverBorderBtn from "@/components/shared/HoverBorderBtn";
 import StarRating from "@/components/shared/StarRating";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Plus } from "lucide-react";
 
@@ -91,18 +91,10 @@ export default function FoodCard({ dish }: { dish: Dish }) {
               <Image src="/toman.png" alt="toman" width={16} height={16} />
             </span>
 
-            <Button
-              size="sm"
-              className="
-            rounded-full
-            px-4
-            bg-primary-500
-            hover:bg-primary-600
-          "
-            >
+            <HoverBorderBtn arialabel="افزودن به سبد خرید">
               <Plus className="w-4 h-4 ml-1" />
               افزودن
-            </Button>
+            </HoverBorderBtn>
           </div>
         </div>
       </CardContent>

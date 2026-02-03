@@ -1,3 +1,9 @@
+import MainMenu from "@/features/menu/MainMenu";
+
 export default function MenuPage() {
-  return <div>menu page</div>;
+  return (
+    <div>
+      <MainMenu />
+    </div>
+  );
 }

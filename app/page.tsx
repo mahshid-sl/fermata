@@ -1,34 +1,47 @@
-import ChefIntroduction from "@/components/shared/ChefIntroduction";
-import Hero from "@/components/shared/Hero";
-import LiveDinnerCTA from "@/components/shared/LiveDinnerCTA ";
-import MenuPack from "@/components/shared/MenuPack";
-import PopularDishes from "@/components/shared/PopularDishes";
-import Service from "@/components/shared/Service";
-import Testimonials from "@/components/shared/Testimonials";
+import LiveDinnerCTA from "@/features/landing/LiveDinnerCTA ";
+import MenuPack from "@/features/menu/MenuPack";
+import PopularDishes from "@/features/landing/PopularDishes";
+import Service from "@/features/landing/Service";
+import Testimonials from "@/features/reviews/Testimonials";
+import Hero from "@/features/landing/Hero";
+import ChefIntroduction from "@/features/staff/ChefIntroduction";
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 export default function RestaurantLanding() {
   return (
-    <div className=" ">
+    <div className="">
       {/* Hero Section */}
       <Hero />
 
       {/* Popular Dishes */}
-      <PopularDishes />
+      <AnimatedSection>
+        <PopularDishes />
+      </AnimatedSection>
 
       {/* Services Section */}
-      <Service />
+      <AnimatedSection>
+        <Service />
+      </AnimatedSection>
 
       {/* Regular Menu Pack */}
-      <MenuPack />
+      <AnimatedSection>
+        <MenuPack />
+      </AnimatedSection>
 
       {/* Reservation Section */}
-      <LiveDinnerCTA />
+      <AnimatedSection>
+        <LiveDinnerCTA />
+      </AnimatedSection>
 
       {/* Testimonials */}
-      <Testimonials />
+      <AnimatedSection>
+        <Testimonials />
+      </AnimatedSection>
 
       {/* Chefs Section */}
-      <ChefIntroduction />
+      <AnimatedSection>
+        <ChefIntroduction />
+      </AnimatedSection>
     </div>
   );
 }

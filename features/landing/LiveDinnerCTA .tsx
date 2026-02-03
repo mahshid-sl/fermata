@@ -9,6 +9,7 @@ export default function LiveDinnerCTA() {
       imageSrc="/dining.png"
       imagePosition="right"
       className="lg:py-10"
+      href="/reservation"
     />
   );
 }

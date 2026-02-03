@@ -32,6 +32,7 @@ export default function Service() {
       buttonText="درباره ما"
       imageSrc="/chef.png"
       services={service}
+      href="/about-us"
     />
   );
 }

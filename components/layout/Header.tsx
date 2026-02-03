@@ -37,7 +37,7 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-primary-300 hover:bg-primary-100"
+                className="rounded-full border-primary-300 hover:bg-primary-100 cursor-pointer"
                 aria-label="سبد خرید"
               >
                 <ShoppingCart size={20} />
@@ -54,7 +54,7 @@ export default function Header() {
               as="button"
               className="hidden md:flex items-center gap-2 px-4 py-2
                         bg-primary-100 text-primary-800 text-sm
-                        hover:bg-primary-200 transition"
+                        hover:bg-primary-200 transition cursor-pointer"
               aria-label="ورود یا ثبت‌نام"
             >
               <LogIn size={16} />
